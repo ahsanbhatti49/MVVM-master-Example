@@ -1,0 +1,12 @@
+<resources>
+    <!-- App details -->
+    <string name="app_name">TestApp</string>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_all_list">All List</string>
+    <string name="str_enter_name">Enter name</string>
+    <string name="str_category">Category</string>
+    <string name="str_submit">Submit</string>
+    <string name="str_status">Status</string>
+</resources>
