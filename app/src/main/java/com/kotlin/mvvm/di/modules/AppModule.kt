@@ -2,13 +2,10 @@ package com.kotlin.mvvm.di.modules
 
 import android.content.Context
 import android.content.res.Resources
-import androidx.room.Room
 import com.kotlin.mvvm.BuildConfig
 import com.kotlin.mvvm.app.App
 import com.kotlin.mvvm.repository.api.ApiServices
 import com.kotlin.mvvm.repository.api.network.LiveDataCallAdapterFactoryForRetrofit
-import com.kotlin.mvvm.repository.db.AppDatabase
-import com.kotlin.mvvm.repository.db.grocery_dao.GroceryDao
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -43,24 +40,6 @@ class AppModule {
             .build()
             .create(ApiServices::class.java)
     }
-
-
-    /**
-     * Provides app AppDatabase
-     */
-    @Singleton
-    @Provides
-    fun provideDb(context: Context): AppDatabase =
-        Room.databaseBuilder(context, AppDatabase::class.java, "news-db")
-            .fallbackToDestructiveMigration().build()
-
-
-    /**
-     * Provides GroceryDao an object to access Countries table from Database
-     */
-    @Singleton
-    @Provides
-    fun provideGroceryDao(db: AppDatabase): GroceryDao = db.groceryPostDao()
 
 
     /**

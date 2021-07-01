@@ -18,13 +18,13 @@ android {
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "NEWS_API_KEY", credentialProperty['NEWS_API_KEY'])
         buildConfigField("String", "BASE_URL", credentialProperty['BASE_URL'])
     }
 
     buildFeatures {
 
         dataBinding true
+        viewBinding true
 
         // for view binding:
         // viewBinding true
@@ -70,7 +70,12 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
     testImplementation "com.squareup.okhttp3:mockwebserver:$okHttpVersion"
+
+    implementation 'com.google.android.gms:play-services:12.0.1'
+    implementation 'com.firebase:firebase-client-android:2.3.1'
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
 
 
     //KTX
@@ -116,4 +121,5 @@ dependencies {
     androidTestImplementation("com.android.support.test.espresso:espresso-core:$espressoVersion", {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
 }

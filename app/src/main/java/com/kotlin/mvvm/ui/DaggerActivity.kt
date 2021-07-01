@@ -1,11 +1,13 @@
 package com.kotlin.mvvm.ui
 
 import androidx.lifecycle.ViewModelProvider
+import com.kotlin.mvvm.repository.model.SharedViewModel
+import com.kotlin.mvvm.utils.extensions.getViewModel
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
 /**
- * Created by Waheed on 04,November,2019
+ * Created by ahsan on 04,November,2019
  * Updated to dagger 2.27, 29, September 2020
  */
 
@@ -20,4 +22,8 @@ abstract class DaggerActivity : DaggerAppCompatActivity() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    public val sharedViewModel by lazy {
+        getViewModel<SharedViewModel>()
+    }
 }

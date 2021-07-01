@@ -3,9 +3,7 @@ package com.kotlin.mvvm.di.modules
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.kotlin.mvvm.di.base.ViewModelFactory
-import com.kotlin.mvvm.ui.Activity.ui.CreatePostViewModel
-import com.kotlin.mvvm.ui.Activity.ui.dashboard.DashboardViewModel
-import com.kotlin.mvvm.ui.Activity.ui.home.HomeViewModel
+import com.kotlin.mvvm.vm.FleetListViewModel
 import dagger.Binds
 import dagger.MapKey
 import dagger.Module
@@ -24,18 +22,8 @@ abstract class ViewModelModule {
      */
     @Binds
     @IntoMap
-    @ViewModelKey(CreatePostViewModel::class)
-    abstract fun bindCreatePostViewModel(createPostViewModel: CreatePostViewModel): ViewModel
-
-    @Binds
-    @IntoMap
-    @ViewModelKey(HomeViewModel::class)
-    abstract fun bindHomeViewModel(homeViewModel: HomeViewModel): ViewModel
-
-    @Binds
-    @IntoMap
-    @ViewModelKey(DashboardViewModel::class)
-    abstract fun bindDashboardViewModel(dashboardViewModel: DashboardViewModel): ViewModel
+    @ViewModelKey(FleetListViewModel::class)
+    abstract fun bindFleetListViewModel(fleetListViewModel: FleetListViewModel): ViewModel
 
     /**
      * Binds ViewModels factory to provide ViewModels.

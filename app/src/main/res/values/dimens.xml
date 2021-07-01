@@ -13,4 +13,5 @@
     <dimen name="country_image_size">160sp</dimen>
     <dimen name="textview_size_small">12sp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

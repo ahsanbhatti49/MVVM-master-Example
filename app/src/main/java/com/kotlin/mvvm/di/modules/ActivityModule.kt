@@ -1,7 +1,7 @@
 package com.kotlin.mvvm.di.modules
 
-import com.kotlin.mvvm.ui.Activity.ui.CreatePostActivity
- import dagger.Module
+import com.kotlin.mvvm.ui.FleetListActivity
+import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
 /**
@@ -19,5 +19,5 @@ abstract class ActivityModule {
      */
 
     @ContributesAndroidInjector
-    abstract fun contributeCreatePostActivity(): CreatePostActivity
+    abstract fun contributeFleetListActivity(): FleetListActivity
 }

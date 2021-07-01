@@ -1,7 +1,7 @@
 package com.kotlin.mvvm.di.modules
 
-import com.kotlin.mvvm.ui.Activity.ui.dashboard.DashboardFragment
-import com.kotlin.mvvm.ui.Activity.ui.home.HomeFragment
+import com.kotlin.mvvm.ui.FirstFragment
+import com.kotlin.mvvm.ui.SecondFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -12,10 +12,9 @@ abstract class FragmentModule {
     /**
      * Injecting Fragments
      */
+    @ContributesAndroidInjector
+    internal abstract fun contributeFirstFragment(): FirstFragment
 
     @ContributesAndroidInjector
-    internal abstract fun contributeHomeFragment(): HomeFragment
-
-    @ContributesAndroidInjector
-    internal abstract fun contributeDashboardFragment(): DashboardFragment
+    internal abstract fun contributeSecondFragment(): SecondFragment
 }
