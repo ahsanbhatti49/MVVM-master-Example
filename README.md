@@ -1,6 +1,6 @@
 ## Kotlin MVVM Architecture
 
-A sample app that display list of Google news. The purpose of this project to illustrate the usage of MVVM architecture design pattern that follow the best practices of Object Oriented Design Patterns using the following technology stack.
+A sample app that display list of Fleet. The purpose of this project to illustrate the usage of MVVM architecture design pattern that follow the best practices of Object Oriented Design Patterns using the following technology stack.
 
  1. Architecture Design Pattern
  2. MVVM
